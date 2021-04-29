@@ -97,8 +97,7 @@ INFO:     127.0.0.1:62518 - "POST /graphql/ HTTP/1.1" 200 OK
 
 ```
 
-I did observe the double-release happening when using GraphiQL. [This block](https://github.
-com/strawberry-graphql/strawberry/blob/f31e6c17238ba4372129c4f291ddf336b4e6b901/strawberry/asgi/__init__.py#L149) 
+I did observe the double-release happening when using GraphiQL. [This block](https://github.com/strawberry-graphql/strawberry/blob/f31e6c17238ba4372129c4f291ddf336b4e6b901/strawberry/asgi/__init__.py#L149) 
 was re-entrant when GraphiQL page was refreshed. I could not confirm whether this led to the error. When 
 using the `websockets` python client, this re-entrancy was not observed.
 
